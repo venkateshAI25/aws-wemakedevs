@@ -1,0 +1,6 @@
+{
+  "name": "SyncChat - Message Center Hub",
+  "description": "All your conversations from WhatsApp, Gmail, Telegram, Teams, and more in one unified smart workspace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

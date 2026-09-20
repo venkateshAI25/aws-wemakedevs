@@ -1,0 +1,1128 @@
+// Initial data model extracted from live reference site
+export const INITIAL_DATA = {
+  "user": {
+    "id": "6aaf79706fa05833ab298209",
+    "name": "Venkatesh S",
+    "email": "demo@syncchat.app",
+    "role": "admin",
+    "connected_platforms": [
+      "whatsapp",
+      "gmail",
+      "telegram",
+      "teams"
+    ],
+    "settings": {
+      "notify_messages": true,
+      "notify_reports": true,
+      "theme": "dark"
+    }
+  },
+  "platforms": [
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "color": "#25D366",
+      "description": "Connect your WhatsApp conversations to SyncChat.",
+      "connected": true
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "color": "#EA4335",
+      "description": "Sync your important email threads into one inbox.",
+      "connected": true
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "color": "#E01E5A",
+      "description": "Bring your Slack channels and DMs together.",
+      "connected": false
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "color": "#229ED9",
+      "description": "Connect Telegram chats and groups to SyncChat.",
+      "connected": true
+    },
+    {
+      "id": "teams",
+      "name": "Microsoft Teams",
+      "color": "#6264A7",
+      "description": "Unify your Teams meetings and channel chats.",
+      "connected": true
+    }
+  ],
+  "conversations": [
+    {
+      "slug": "slack-bugs",
+      "platform": "slack",
+      "space": "project-team",
+      "title": "Bug Reports",
+      "participants": [
+        {
+          "name": "Priya Nair",
+          "avatar": "https://ui-avatars.com/api/?name=Priya+Nair&background=E01E5A&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "Nice catch. Logging it as P1 for this sprint.",
+      "last_sender": "You",
+      "time": "8:33 AM",
+      "unread": 2,
+      "priority": "high",
+      "attachments": []
+    },
+    {
+      "slug": "gmail-feedback",
+      "platform": "gmail",
+      "space": "client-work",
+      "title": "Client Feedback",
+      "participants": [
+        {
+          "name": "James Wilson",
+          "avatar": "https://ui-avatars.com/api/?name=James+Wilson&background=EA4335&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "Thanks James. I'll prepare the revised timeline by Wednesday.",
+      "last_sender": "You",
+      "time": "8:40 AM",
+      "unread": 2,
+      "priority": "high",
+      "attachments": [
+        {
+          "name": "Proposal_Feedback.pdf",
+          "size": "248 KB",
+          "type": "pdf"
+        }
+      ]
+    },
+    {
+      "slug": "wa-project-updates",
+      "platform": "whatsapp",
+      "space": "project-team",
+      "title": "Project Updates",
+      "participants": [
+        {
+          "name": "Arjun Mehta",
+          "avatar": "https://ui-avatars.com/api/?name=Arjun+Mehta&background=25D366&color=fff&bold=true"
+        },
+        {
+          "name": "Priya Nair",
+          "avatar": "https://ui-avatars.com/api/?name=Priya+Nair&background=6366F1&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "Test reply from playwright",
+      "last_sender": "You",
+      "time": "6:28 AM",
+      "unread": 0,
+      "priority": "high",
+      "attachments": []
+    },
+    {
+      "slug": "slack-design",
+      "platform": "slack",
+      "space": "project-team",
+      "title": "Design Discussion",
+      "participants": [
+        {
+          "name": "Sarah Chen",
+          "avatar": "https://ui-avatars.com/api/?name=Sarah+Chen&background=E01E5A&color=fff&bold=true"
+        },
+        {
+          "name": "David Krum",
+          "avatar": "https://ui-avatars.com/api/?name=David+Krum&background=6366F1&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "Decision made ✅ Shipping the new palette this sprint.",
+      "last_sender": "Sarah Chen",
+      "time": "9:50 AM",
+      "unread": 1,
+      "priority": "normal",
+      "attachments": []
+    },
+    {
+      "slug": "tg-marketing",
+      "platform": "telegram",
+      "space": "marketing",
+      "title": "Marketing Ideas",
+      "participants": [
+        {
+          "name": "Leo Martin",
+          "avatar": "https://ui-avatars.com/api/?name=Leo+Martin&background=229ED9&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "Love it. Let's model the CAC impact first.",
+      "last_sender": "You",
+      "time": "12:10 PM",
+      "unread": 1,
+      "priority": "normal",
+      "attachments": []
+    },
+    {
+      "slug": "teams-standup",
+      "platform": "teams",
+      "space": "project-team",
+      "title": "Daily Standup",
+      "participants": [
+        {
+          "name": "Rahul Verma",
+          "avatar": "https://ui-avatars.com/api/?name=Rahul+Verma&background=6264A7&color=fff&bold=true"
+        },
+        {
+          "name": "Sarah Chen",
+          "avatar": "https://ui-avatars.com/api/?name=Sarah+Chen&background=6366F1&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "I'll unblock Sarah — icons ready by noon.",
+      "last_sender": "You",
+      "time": "9:35 AM",
+      "unread": 1,
+      "priority": "normal",
+      "attachments": []
+    },
+    {
+      "slug": "wa-team-chat",
+      "platform": "whatsapp",
+      "space": "project-team",
+      "title": "Team Chat",
+      "participants": [
+        {
+          "name": "Rahul Verma",
+          "avatar": "https://ui-avatars.com/api/?name=Rahul+Verma&background=25D366&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "TEST reply 05360e",
+      "last_sender": "You",
+      "time": "6:27 AM",
+      "unread": 0,
+      "priority": "normal",
+      "attachments": []
+    },
+    {
+      "slug": "wa-client-discussion",
+      "platform": "whatsapp",
+      "space": "client-work",
+      "title": "Client Discussion",
+      "participants": [
+        {
+          "name": "Meera Kapoor",
+          "avatar": "https://ui-avatars.com/api/?name=Meera+Kapoor&background=25D366&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "Thursday 3pm works. I'll send the invite.",
+      "last_sender": "You",
+      "time": "Yesterday",
+      "unread": 0,
+      "priority": "normal",
+      "attachments": []
+    },
+    {
+      "slug": "slack-dev",
+      "platform": "slack",
+      "space": "project-team",
+      "title": "Development Team",
+      "participants": [
+        {
+          "name": "Alex Rivera",
+          "avatar": "https://ui-avatars.com/api/?name=Alex+Rivera&background=E01E5A&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "On it. Will push tests before merge.",
+      "last_sender": "Alex Rivera",
+      "time": "11:12 AM",
+      "unread": 0,
+      "priority": "normal",
+      "attachments": []
+    },
+    {
+      "slug": "gmail-launch",
+      "platform": "gmail",
+      "space": "marketing",
+      "title": "Product Launch",
+      "participants": [
+        {
+          "name": "Nina Roberts",
+          "avatar": "https://ui-avatars.com/api/?name=Nina+Roberts&background=EA4335&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "Got it. Design will hand off hero banners by the 23rd.",
+      "last_sender": "You",
+      "time": "Yesterday",
+      "unread": 0,
+      "priority": "normal",
+      "attachments": [
+        {
+          "name": "Launch_Checklist.xlsx",
+          "size": "64 KB",
+          "type": "sheet"
+        }
+      ]
+    },
+    {
+      "slug": "gmail-followup",
+      "platform": "gmail",
+      "space": "client-work",
+      "title": "Meeting Follow-up",
+      "participants": [
+        {
+          "name": "Meera Kapoor",
+          "avatar": "https://ui-avatars.com/api/?name=Meera+Kapoor&background=EA4335&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "Perfect summary, thank you. I'll circulate the scope doc.",
+      "last_sender": "You",
+      "time": "2 days ago",
+      "unread": 0,
+      "priority": "normal",
+      "attachments": []
+    },
+    {
+      "slug": "tg-community",
+      "platform": "telegram",
+      "space": "marketing",
+      "title": "Community Chat",
+      "participants": [
+        {
+          "name": "Community",
+          "avatar": "https://ui-avatars.com/api/?name=Community&background=229ED9&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "Noted. Adding mobile to the roadmap discussion.",
+      "last_sender": "You",
+      "time": "Yesterday",
+      "unread": 0,
+      "priority": "normal",
+      "attachments": []
+    },
+    {
+      "slug": "teams-planning",
+      "platform": "teams",
+      "space": "project-team",
+      "title": "Project Planning",
+      "participants": [
+        {
+          "name": "Nina Roberts",
+          "avatar": "https://ui-avatars.com/api/?name=Nina+Roberts&background=6264A7&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "last_message": "Agreed. I'll break these into stories tonight.",
+      "last_sender": "You",
+      "time": "3 days ago",
+      "unread": 0,
+      "priority": "normal",
+      "attachments": []
+    }
+  ],
+  "spaces": [
+    {
+      "slug": "project-team",
+      "color": "#6366F1",
+      "description": "Product build, engineering and design coordination.",
+      "name": "Project Team",
+      "conversation_count": 7,
+      "platforms": [
+        "slack",
+        "teams",
+        "whatsapp"
+      ],
+      "unread": 4
+    },
+    {
+      "slug": "marketing",
+      "color": "#8B5CF6",
+      "description": "Campaigns, launches and community growth.",
+      "name": "Marketing",
+      "conversation_count": 3,
+      "platforms": [
+        "gmail",
+        "telegram"
+      ],
+      "unread": 1
+    },
+    {
+      "slug": "client-work",
+      "color": "#3B82F6",
+      "description": "Client communication, feedback and deliverables.",
+      "name": "Client Work",
+      "conversation_count": 3,
+      "platforms": [
+        "gmail",
+        "whatsapp"
+      ],
+      "unread": 2
+    },
+    {
+      "slug": "test-space-c04b-013b",
+      "name": "TEST Space c04b",
+      "description": "test",
+      "color": "#6366F1",
+      "conversation_count": 0,
+      "platforms": [],
+      "unread": 0
+    }
+  ],
+  "reports": [
+    {
+      "id": "5a13a059eb4e45b0921cb1c73ed8831e",
+      "user_id": "6aaf79706fa05833ab298209",
+      "title": "Conversation Summary",
+      "type": "Conversation Summary",
+      "date": "September 20, 2026",
+      "platforms": [
+        "gmail",
+        "slack",
+        "teams",
+        "telegram",
+        "whatsapp"
+      ],
+      "conversations_analyzed": [
+        "Project Updates",
+        "Team Chat",
+        "Client Discussion",
+        "Design Discussion",
+        "Development Team",
+        "Bug Reports",
+        "Client Feedback",
+        "Product Launch",
+        "Meeting Follow-up",
+        "Marketing Ideas",
+        "Community Chat",
+        "Daily Standup",
+        "Project Planning"
+      ],
+      "summary": "This Conversation Summary analyzes 13 conversation(s) across gmail, slack, teams, telegram, whatsapp. The team is progressing on the v2.4 release, finalized the design palette, and is handling positive client feedback with follow-up actions.",
+      "key_discussions": [
+        "Project Updates (whatsapp)",
+        "Team Chat (whatsapp)",
+        "Client Discussion (whatsapp)",
+        "Design Discussion (slack)",
+        "Development Team (slack)",
+        "Bug Reports (slack)",
+        "Client Feedback (gmail)",
+        "Product Launch (gmail)",
+        "Meeting Follow-up (gmail)",
+        "Marketing Ideas (telegram)",
+        "Community Chat (telegram)",
+        "Daily Standup (teams)",
+        "Project Planning (teams)"
+      ],
+      "decisions": [
+        "Proceed with QA on v2.4 immediately",
+        "Adopt indigo/violet palette",
+        "Ship new palette this sprint",
+        "Provide a fixed-price option"
+      ],
+      "action_items": [
+        "Priya: complete web regression suite",
+        "Arjun: finish mobile testing by EOD and report issues",
+        "Venkatesh: update the design tokens",
+        "Venkatesh: prepare revised timeline by Wednesday"
+      ],
+      "people": [
+        "Alex Rivera",
+        "Arjun Mehta",
+        "Community",
+        "David Krum",
+        "James Wilson",
+        "Leo Martin",
+        "Meera Kapoor",
+        "Nina Roberts",
+        "Priya Nair",
+        "Rahul Verma",
+        "Sarah Chen"
+      ],
+      "pending_tasks": [
+        "Complete mobile testing for v2.4",
+        "Deliver revised client timeline by Wednesday",
+        "Finalize launch assets by the 24th"
+      ],
+      "recommendations": [
+        "Prioritize the P1 mobile overflow fix",
+        "Lock the release date after QA sign-off",
+        "Send the fixed-price option to the client this week"
+      ],
+      "created_at": "2026-09-20T06:28:28.107011+00:00"
+    },
+    {
+      "id": "22ed7d1a07d74b5fb60cac93a9a61054",
+      "user_id": "6aaf79706fa05833ab298209",
+      "title": "TEST Weekly Report",
+      "type": "weekly-summary",
+      "date": "September 20, 2026",
+      "platforms": [
+        "slack",
+        "whatsapp"
+      ],
+      "conversations_analyzed": [
+        "Project Updates",
+        "Design Discussion"
+      ],
+      "summary": "This weekly-summary analyzes 2 conversation(s) across slack, whatsapp. The team is progressing on the v2.4 release, finalized the design palette, and is handling positive client feedback with follow-up actions.",
+      "key_discussions": [
+        "Project Updates (whatsapp)",
+        "Design Discussion (slack)"
+      ],
+      "decisions": [
+        "Proceed with QA on v2.4 immediately",
+        "Adopt indigo/violet palette",
+        "Ship new palette this sprint"
+      ],
+      "action_items": [
+        "Priya: complete web regression suite",
+        "Arjun: finish mobile testing by EOD and report issues",
+        "Venkatesh: update the design tokens"
+      ],
+      "people": [
+        "Arjun Mehta",
+        "David Krum",
+        "Priya Nair",
+        "Sarah Chen"
+      ],
+      "pending_tasks": [
+        "Complete mobile testing for v2.4",
+        "Deliver revised client timeline by Wednesday",
+        "Finalize launch assets by the 24th"
+      ],
+      "recommendations": [
+        "Prioritize the P1 mobile overflow fix",
+        "Lock the release date after QA sign-off",
+        "Send the fixed-price option to the client this week"
+      ],
+      "created_at": "2026-09-20T06:27:21.344256+00:00"
+    }
+  ],
+  "notifications": [
+    {
+      "type": "message",
+      "title": "New message from Arjun",
+      "body": "Mobile testing will be done by EOD.",
+      "time": "2m ago",
+      "read": false
+    },
+    {
+      "type": "report",
+      "title": "AI report completed",
+      "body": "Team Activity Report is ready to download.",
+      "time": "18m ago",
+      "read": false
+    },
+    {
+      "type": "app",
+      "title": "New app connected",
+      "body": "Slack was connected to SyncChat.",
+      "time": "1h ago",
+      "read": true
+    },
+    {
+      "type": "message",
+      "title": "Unread conversation",
+      "body": "You have 2 unread emails in Client Feedback.",
+      "time": "3h ago",
+      "read": true
+    }
+  ],
+  "conversationsDetails": {
+    "slack-bugs": {
+      "slug": "slack-bugs",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Priya Nair",
+          "text": "Found a layout overflow on mobile inbox at 390px.",
+          "time": "8:30 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Nice catch. Logging it as P1 for this sprint.",
+          "time": "8:33 AM",
+          "direction": "out",
+          "status": "read"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Priya Nair",
+          "avatar": "https://ui-avatars.com/api/?name=Priya+Nair&background=E01E5A&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "slack",
+      "priority": "high",
+      "space": "project-team",
+      "title": "Bug Reports",
+      "unread": 2
+    },
+    "gmail-feedback": {
+      "slug": "gmail-feedback",
+      "attachments": [
+        {
+          "name": "Proposal_Feedback.pdf",
+          "size": "248 KB",
+          "type": "pdf"
+        }
+      ],
+      "messages": [
+        {
+          "sender": "James Wilson",
+          "text": "Client shared feedback on the proposal. Overall very positive!",
+          "time": "8:15 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "James Wilson",
+          "text": "They requested a revised timeline and a fixed-price option.",
+          "time": "8:16 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Thanks James. I'll prepare the revised timeline by Wednesday.",
+          "time": "8:40 AM",
+          "direction": "out",
+          "status": "read"
+        }
+      ],
+      "participants": [
+        {
+          "name": "James Wilson",
+          "avatar": "https://ui-avatars.com/api/?name=James+Wilson&background=EA4335&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "gmail",
+      "priority": "high",
+      "space": "client-work",
+      "title": "Client Feedback",
+      "unread": 2
+    },
+    "wa-project-updates": {
+      "slug": "wa-project-updates",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Arjun Mehta",
+          "text": "Hey team, the latest build v2.4 is ready for testing.",
+          "time": "10:24 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "Priya Nair",
+          "text": "Great! I'll start on the web regression suite now.",
+          "time": "10:26 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Perfect. Arjun, can you take the mobile flows?",
+          "time": "10:28 AM",
+          "direction": "out",
+          "status": "read"
+        },
+        {
+          "sender": "Arjun Mehta",
+          "text": "Yes, I'll finish mobile testing by EOD and report any issues.",
+          "time": "10:30 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "Priya Nair",
+          "text": "Performance looks 20% faster on the dashboard load 🎉",
+          "time": "10:34 AM",
+          "direction": "in",
+          "status": "delivered"
+        },
+        {
+          "sender": "You",
+          "text": "Test reply from playwright",
+          "time": "6:28 AM",
+          "direction": "out",
+          "status": "sent"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Arjun Mehta",
+          "avatar": "https://ui-avatars.com/api/?name=Arjun+Mehta&background=25D366&color=fff&bold=true"
+        },
+        {
+          "name": "Priya Nair",
+          "avatar": "https://ui-avatars.com/api/?name=Priya+Nair&background=6366F1&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "whatsapp",
+      "priority": "high",
+      "space": "project-team",
+      "title": "Project Updates",
+      "unread": 0
+    },
+    "slack-design": {
+      "slug": "slack-design",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Sarah Chen",
+          "text": "The new UI direction looks great! Loving the dark theme.",
+          "time": "9:42 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "David Krum",
+          "text": "Agreed. Should we finalize the accent color as indigo?",
+          "time": "9:45 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Yes, indigo + violet gradient it is. I'll update the tokens.",
+          "time": "9:48 AM",
+          "direction": "out",
+          "status": "read"
+        },
+        {
+          "sender": "Sarah Chen",
+          "text": "Decision made ✅ Shipping the new palette this sprint.",
+          "time": "9:50 AM",
+          "direction": "in",
+          "status": "delivered"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Sarah Chen",
+          "avatar": "https://ui-avatars.com/api/?name=Sarah+Chen&background=E01E5A&color=fff&bold=true"
+        },
+        {
+          "name": "David Krum",
+          "avatar": "https://ui-avatars.com/api/?name=David+Krum&background=6366F1&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "slack",
+      "priority": "normal",
+      "space": "project-team",
+      "title": "Design Discussion",
+      "unread": 1
+    },
+    "tg-marketing": {
+      "slug": "tg-marketing",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Leo Martin",
+          "text": "Idea: a referral loop with a 2-sided reward. Thoughts?",
+          "time": "12:05 PM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Love it. Let's model the CAC impact first.",
+          "time": "12:10 PM",
+          "direction": "out",
+          "status": "read"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Leo Martin",
+          "avatar": "https://ui-avatars.com/api/?name=Leo+Martin&background=229ED9&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "telegram",
+      "priority": "normal",
+      "space": "marketing",
+      "title": "Marketing Ideas",
+      "unread": 1
+    },
+    "teams-standup": {
+      "slug": "teams-standup",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Rahul Verma",
+          "text": "Yesterday: finished the inbox API. Today: search endpoint.",
+          "time": "9:31 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "Sarah Chen",
+          "text": "Blocker: waiting on final icons from design.",
+          "time": "9:33 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "I'll unblock Sarah — icons ready by noon.",
+          "time": "9:35 AM",
+          "direction": "out",
+          "status": "read"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Rahul Verma",
+          "avatar": "https://ui-avatars.com/api/?name=Rahul+Verma&background=6264A7&color=fff&bold=true"
+        },
+        {
+          "name": "Sarah Chen",
+          "avatar": "https://ui-avatars.com/api/?name=Sarah+Chen&background=6366F1&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "teams",
+      "priority": "normal",
+      "space": "project-team",
+      "title": "Daily Standup",
+      "unread": 1
+    },
+    "wa-team-chat": {
+      "slug": "wa-team-chat",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Rahul Verma",
+          "text": "Standup moved to 9:30 tomorrow, works for everyone?",
+          "time": "9:15 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Works for me 👍",
+          "time": "9:20 AM",
+          "direction": "out",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "TEST reply 05360e",
+          "time": "6:27 AM",
+          "direction": "out",
+          "status": "sent"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Rahul Verma",
+          "avatar": "https://ui-avatars.com/api/?name=Rahul+Verma&background=25D366&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "whatsapp",
+      "priority": "normal",
+      "space": "project-team",
+      "title": "Team Chat",
+      "unread": 0
+    },
+    "wa-client-discussion": {
+      "slug": "wa-client-discussion",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Meera Kapoor",
+          "text": "Can we push the demo to Thursday? Client needs more prep.",
+          "time": "Yesterday",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Thursday 3pm works. I'll send the invite.",
+          "time": "Yesterday",
+          "direction": "out",
+          "status": "read"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Meera Kapoor",
+          "avatar": "https://ui-avatars.com/api/?name=Meera+Kapoor&background=25D366&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "whatsapp",
+      "priority": "normal",
+      "space": "client-work",
+      "title": "Client Discussion",
+      "unread": 0
+    },
+    "slack-dev": {
+      "slug": "slack-dev",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Alex Rivera",
+          "text": "PR #218 is up — refactors the auth service.",
+          "time": "11:02 AM",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Reviewing now. Add tests for the token refresh path please.",
+          "time": "11:10 AM",
+          "direction": "out",
+          "status": "read"
+        },
+        {
+          "sender": "Alex Rivera",
+          "text": "On it. Will push tests before merge.",
+          "time": "11:12 AM",
+          "direction": "in",
+          "status": "read"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Alex Rivera",
+          "avatar": "https://ui-avatars.com/api/?name=Alex+Rivera&background=E01E5A&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "slack",
+      "priority": "normal",
+      "space": "project-team",
+      "title": "Development Team",
+      "unread": 0
+    },
+    "gmail-launch": {
+      "slug": "gmail-launch",
+      "attachments": [
+        {
+          "name": "Launch_Checklist.xlsx",
+          "size": "64 KB",
+          "type": "sheet"
+        }
+      ],
+      "messages": [
+        {
+          "sender": "Nina Roberts",
+          "text": "Launch date is locked for the 28th. Assets due the 24th.",
+          "time": "Yesterday",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Got it. Design will hand off hero banners by the 23rd.",
+          "time": "Yesterday",
+          "direction": "out",
+          "status": "read"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Nina Roberts",
+          "avatar": "https://ui-avatars.com/api/?name=Nina+Roberts&background=EA4335&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "gmail",
+      "priority": "normal",
+      "space": "marketing",
+      "title": "Product Launch",
+      "unread": 0
+    },
+    "gmail-followup": {
+      "slug": "gmail-followup",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Meera Kapoor",
+          "text": "Sharing notes from today's call. Key action: finalize scope.",
+          "time": "2 days ago",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Perfect summary, thank you. I'll circulate the scope doc.",
+          "time": "2 days ago",
+          "direction": "out",
+          "status": "read"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Meera Kapoor",
+          "avatar": "https://ui-avatars.com/api/?name=Meera+Kapoor&background=EA4335&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "gmail",
+      "priority": "normal",
+      "space": "client-work",
+      "title": "Meeting Follow-up",
+      "unread": 0
+    },
+    "tg-community": {
+      "slug": "tg-community",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Community",
+          "text": "Users are asking for a mobile app — lots of upvotes!",
+          "time": "Yesterday",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Noted. Adding mobile to the roadmap discussion.",
+          "time": "Yesterday",
+          "direction": "out",
+          "status": "read"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Community",
+          "avatar": "https://ui-avatars.com/api/?name=Community&background=229ED9&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "telegram",
+      "priority": "normal",
+      "space": "marketing",
+      "title": "Community Chat",
+      "unread": 0
+    },
+    "teams-planning": {
+      "slug": "teams-planning",
+      "attachments": [],
+      "messages": [
+        {
+          "sender": "Nina Roberts",
+          "text": "Next sprint scope: AI summary, reports, mobile polish.",
+          "time": "3 days ago",
+          "direction": "in",
+          "status": "read"
+        },
+        {
+          "sender": "You",
+          "text": "Agreed. I'll break these into stories tonight.",
+          "time": "3 days ago",
+          "direction": "out",
+          "status": "read"
+        }
+      ],
+      "participants": [
+        {
+          "name": "Nina Roberts",
+          "avatar": "https://ui-avatars.com/api/?name=Nina+Roberts&background=6264A7&color=fff&bold=true"
+        },
+        {
+          "name": "You",
+          "avatar": "https://ui-avatars.com/api/?name=Venkatesh+S&background=8B5CF6&color=fff&bold=true"
+        }
+      ],
+      "platform": "teams",
+      "priority": "normal",
+      "space": "project-team",
+      "title": "Project Planning",
+      "unread": 0
+    }
+  }
+};
