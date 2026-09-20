@@ -67,9 +67,20 @@ export default function AISummaryPage() {
       </div>
 
       {loading && (
-        <div className="sc-card p-6 mt-6 flex items-center gap-3" data-testid="summary-page-loading">
-          <Loader2 size={18} className="animate-spin text-indigo-400" />
-          <span className="text-sm text-gray-300">Analyzing conversation...</span>
+        <div className="sc-card p-6 mt-6 space-y-4 relative overflow-hidden" data-testid="summary-page-loading">
+          <div className="absolute top-0 left-0 right-0 h-1 sc-signal-beam" />
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 shrink-0">
+              <Sparkles size={20} className="animate-spin" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-white">Synthesizing Conversation Intelligence</p>
+              <p className="text-xs text-indigo-300/80">Scanning thread history, extracting key decisions & compiling action items...</p>
+            </div>
+          </div>
+          <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-indigo-500 via-violet-500 to-blue-500 rounded-full animate-[sc-beam-travel_2s_linear_infinite]" />
+          </div>
         </div>
       )}
 

@@ -168,3 +168,346 @@ code, .font-mono {
 .sc-dot:nth-child(3) {
   animation-delay: 0.4s;
 }
+
+/* ===================================================
+   COMMUNICATION ORB & ADVANCED MOTION SYSTEM
+   =================================================== */
+
+@keyframes sc-orb-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(2px, -6px, 0) rotate(0.8deg);
+  }
+  50% {
+    transform: translate3d(-2px, 4px, 0) rotate(-0.8deg);
+  }
+  75% {
+    transform: translate3d(-1px, -3px, 0) rotate(0.4deg);
+  }
+}
+
+@keyframes sc-orb-glow-breathe {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2), 0 0 40px rgba(139, 92, 246, 0.12);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(99, 102, 241, 0.4), 0 0 65px rgba(139, 92, 246, 0.28);
+  }
+}
+
+@keyframes sc-orbit-cw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sc-orbit-counter {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes sc-signal-ripple {
+  0% {
+    transform: scale(0.65);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes sc-message-arrive {
+  0% {
+    transform: scale(0.92);
+  }
+  35% {
+    transform: scale(1.14);
+  }
+  70% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sc-message-send-pulse {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.12) translateY(-4px);
+  }
+  60% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sc-particle-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate3d(5px, -7px, 0);
+    opacity: 0.85;
+  }
+}
+
+@keyframes sc-unread-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(99, 102, 241, 0);
+  }
+}
+
+.sc-unread-pulse {
+  animation: sc-unread-glow 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+@keyframes sc-item-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.sc-animate-item-enter {
+  animation: sc-item-enter 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Subtle message list hover */
+.sc-conv-item {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease;
+}
+.sc-conv-item:hover {
+  transform: translateX(2px);
+}
+
+/* Message send flight effect */
+@keyframes sc-message-fly-out {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.sc-message-send-enter {
+  animation: sc-message-fly-out 0.24s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ===================================================
+   CREATIVE COMMUNICATION-THEMED MOTION & DOVE ANIMATION
+   =================================================== */
+
+/* Flying Messenger Dove with Wing Flapping */
+@keyframes sc-wing-flap-left {
+  0%, 100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+  50% {
+    transform: rotate(-24deg) scaleY(0.7);
+  }
+}
+
+@keyframes sc-wing-flap-right {
+  0%, 100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+  50% {
+    transform: rotate(24deg) scaleY(0.7);
+  }
+}
+
+@keyframes sc-dove-glide {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(4px, -8px, 0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translate3d(8px, -2px, 0) rotate(1deg);
+  }
+  75% {
+    transform: translate3d(3px, -10px, 0) rotate(-0.5deg);
+  }
+}
+
+@keyframes sc-dove-fly-across {
+  0% {
+    transform: translate3d(-60px, 12px, 0) scale(0.92);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.sc-dove-body {
+  animation: sc-dove-glide 4.5s ease-in-out infinite;
+}
+
+.sc-dove-wing-left {
+  transform-origin: 22px 28px;
+  animation: sc-wing-flap-left 0.75s ease-in-out infinite;
+}
+
+.sc-dove-wing-right {
+  transform-origin: 32px 28px;
+  animation: sc-wing-flap-right 0.75s ease-in-out infinite;
+}
+
+.sc-dove-enter {
+  animation: sc-dove-fly-across 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Majestic Flying Dove Photo Soaring Animation */
+@keyframes sc-dove-soar {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 15px 35px rgba(139, 92, 246, 0.35));
+  }
+  25% {
+    transform: translate3d(8px, -16px, 0) rotate(-2deg) scale(1.02);
+    filter: drop-shadow(0 25px 45px rgba(99, 102, 241, 0.45));
+  }
+  50% {
+    transform: translate3d(16px, -6px, 0) rotate(2deg) scale(1.04);
+    filter: drop-shadow(0 20px 40px rgba(139, 92, 246, 0.4));
+  }
+  75% {
+    transform: translate3d(6px, -20px, 0) rotate(-1deg) scale(1.02);
+    filter: drop-shadow(0 28px 50px rgba(99, 102, 241, 0.5));
+  }
+}
+
+.sc-dove-soar-animation {
+  animation: sc-dove-soar 6s ease-in-out infinite;
+  will-change: transform, filter;
+}
+
+@keyframes sc-ethereal-aura {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.sc-ethereal-glow {
+  animation: sc-ethereal-aura 4s ease-in-out infinite;
+}
+
+/* Signal Beam for Connecting Apps */
+@keyframes sc-beam-travel {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.sc-signal-beam {
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0) 0%, rgba(99, 102, 241, 0.8) 50%, rgba(139, 92, 246, 0) 100%);
+  background-size: 200% 100%;
+  animation: sc-beam-travel 2s linear infinite;
+}
+
+/* AI Processing Neural Glow */
+@keyframes sc-ai-neural-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.sc-ai-pulse {
+  animation: sc-ai-neural-pulse 2.4s ease-in-out infinite;
+}
+
+/* Paper Airplane Send Micro-Interaction */
+@keyframes sc-send-fly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(6px, -6px) scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+.sc-send-active {
+  animation: sc-send-fly 0.35s ease-out;
+}
+
+/* Soft stardust sparkles trailing the dove */
+@keyframes sc-sparkle-twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+}
+
+.sc-sparkle {
+  animation: sc-sparkle-twinkle 1.8s ease-in-out infinite;
+}
+
+/* Respect user's system preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

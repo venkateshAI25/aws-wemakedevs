@@ -8,7 +8,7 @@ export function PlatformBadge({ id, size = "sm", showName = false, dot = false }
   return (
     <div className="flex items-center gap-2" data-testid={`platform-badge-${id}`}>
       <div
-        className={`${dims} rounded-xl flex items-center justify-center shrink-0`}
+        className={`${dims} rounded-xl flex items-center justify-center shrink-0 hover:scale-105 transition-transform duration-200`}
         style={{ background: `${p.color}22`, border: `1px solid ${p.color}55` }}
       >
         <Icon size={iconSize} style={{ color: p.color }} />

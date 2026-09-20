@@ -73,12 +73,14 @@ export default function Inbox() {
       {/* Center: conversation */}
       <div className={`flex-1 h-full min-w-0 ${mobileChat ? "block" : "hidden lg:block"}`}>
         {active ? (
-          <ConversationView
-            conversation={active}
-            onReply={reply}
-            onBack={() => setMobileChat(false)}
-            onOpenAI={() => setAiOpen(true)}
-          />
+          <div key={active.slug} className="h-full sc-fade-up">
+            <ConversationView
+              conversation={active}
+              onReply={reply}
+              onBack={() => setMobileChat(false)}
+              onOpenAI={() => setAiOpen(true)}
+            />
+          </div>
         ) : (
           <div className="h-full flex flex-col items-center justify-center text-center px-6">
             <div className="w-16 h-16 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-4">

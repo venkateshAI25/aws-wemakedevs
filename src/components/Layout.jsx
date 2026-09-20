@@ -22,7 +22,7 @@ export default function Layout() {
         </SheetContent>
       </Sheet>
 
-      <div className="flex-1 flex flex-col min-w-0">
+      <div className="flex-1 flex flex-col min-w-0 relative">
         <Topbar onMenu={() => setMobileOpen(true)} />
         <main className="flex-1 overflow-y-auto sc-scroll">
           <Outlet />

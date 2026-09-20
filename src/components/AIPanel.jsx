@@ -47,9 +47,22 @@ export default function AIPanel({ conversation, onAsk, onReport }) {
             </button>
           )}
           {loading && (
-            <div className="rounded-xl bg-white/5 border border-white/10 p-4 flex items-center gap-3" data-testid="summary-loading">
-              <Loader2 size={16} className="animate-spin text-indigo-400" />
-              <span className="text-sm text-gray-300">Analyzing conversation...</span>
+            <div className="rounded-2xl bg-white/[0.04] border border-indigo-500/30 p-5 space-y-3 relative overflow-hidden" data-testid="summary-loading">
+              <div className="absolute top-0 left-0 right-0 h-1 sc-signal-beam" />
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 shrink-0">
+                  <Sparkles size={16} className="animate-spin" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">Synthesizing Conversation</p>
+                  <p className="text-xs text-indigo-300/80">Identifying decisions, owners & action items...</p>
+                </div>
+              </div>
+              <div className="space-y-1.5 pt-1">
+                <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div className="h-full bg-gradient-to-r from-indigo-500 to-violet-500 rounded-full animate-[sc-beam-travel_2s_linear_infinite]" />
+                </div>
+              </div>
             </div>
           )}
           {summary && (

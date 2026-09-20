@@ -71,26 +71,32 @@ export default function AskSyncChat() {
 
       <div className="flex-1 overflow-y-auto sc-scroll mt-4 space-y-4 pr-1">
         {messages.map((m, i) => (
-          <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
+          <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"} sc-animate-item-enter`}>
             <div className={`max-w-[85%] ${m.role === "user" ? "" : "w-full"}`}>
-              <div className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+              <div className={`rounded-2xl px-4 py-3 text-sm leading-relaxed transition-all duration-200 ${
                 m.role === "user"
-                  ? "bg-gradient-to-br from-indigo-500 to-violet-600 text-white rounded-br-md"
-                  : "bg-white/5 border border-white/10 text-gray-100 rounded-bl-md"
+                  ? "bg-gradient-to-br from-indigo-500 to-violet-600 text-white rounded-br-md shadow-md shadow-indigo-500/15"
+                  : "bg-white/5 border border-white/10 text-gray-100 rounded-bl-md hover:border-white/20"
               }`} data-testid={`ask-message-${m.role}`}>
-                {m.role === "ai" && <div className="flex items-center gap-1.5 text-[11px] text-indigo-300 mb-1.5"><Sparkles size={12} /> SyncChat AI</div>}
-                {m.text}
+                {m.role === "ai" && (
+                  <div className="flex items-center gap-1.5 text-xs text-indigo-300 font-medium mb-1.5">
+                    <Sparkles size={13} className="text-indigo-400 animate-pulse" /> SyncChat AI
+                  </div>
+                )}
+                <div className="text-gray-100 leading-relaxed">{m.text}</div>
                 {m.role === "ai" && <Sources sources={m.sources} />}
               </div>
             </div>
           </div>
         ))}
         {loading && (
-          <div className="flex justify-start">
-            <div className="rounded-2xl rounded-bl-md bg-white/5 border border-white/10 px-4 py-3 flex items-center gap-1.5" data-testid="ask-loading">
-              <span className="sc-dot w-2 h-2 rounded-full bg-indigo-400" />
-              <span className="sc-dot w-2 h-2 rounded-full bg-violet-400" />
-              <span className="sc-dot w-2 h-2 rounded-full bg-blue-400" />
+          <div className="flex justify-start sc-animate-item-enter">
+            <div className="rounded-2xl rounded-bl-md bg-white/5 border border-indigo-500/30 px-4 py-3 flex items-center gap-2 shadow-sm shadow-indigo-500/10" data-testid="ask-loading">
+              <Sparkles size={14} className="text-indigo-400 animate-spin" />
+              <span className="text-xs text-indigo-300 font-medium mr-1">Thinking</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse delay-100" />
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse delay-200" />
             </div>
           </div>
         )}
@@ -100,7 +106,12 @@ export default function AskSyncChat() {
       {messages.length <= 1 && (
         <div className="flex flex-wrap gap-2 mt-4">
           {SUGGESTIONS.map((s) => (
-            <button key={s} data-testid="ask-suggestion" onClick={() => ask(s)} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-gray-300 hover:bg-white/10 hover:text-white transition-all">
+            <button
+              key={s}
+              data-testid="ask-suggestion"
+              onClick={() => ask(s)}
+              className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-gray-300 hover:bg-white/10 hover:border-indigo-500/40 hover:text-white transition-all duration-150 active:scale-95 shadow-sm"
+            >
               {s}
             </button>
           ))}

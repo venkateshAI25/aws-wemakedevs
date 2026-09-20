@@ -145,9 +145,26 @@ export default function Reports() {
       </div>
 
       {loading && (
-        <div className="sc-card p-6 mt-6 flex items-center gap-3" data-testid="report-loading">
-          <Loader2 size={18} className="animate-spin text-emerald-400" />
-          <span className="text-sm text-gray-300">Analyzing conversations and building your report...</span>
+        <div className="sc-card p-6 mt-6 space-y-4 relative overflow-hidden" data-testid="report-loading">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500/20 via-emerald-400 to-indigo-500/20 sc-signal-beam" />
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <ScrollText size={20} className="animate-pulse" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-white">Aggregating Cross-Channel Intelligence</p>
+              <p className="text-xs text-emerald-300/80">Parsing thread logs, consolidating key decisions & calculating deliverables...</p>
+            </div>
+          </div>
+          <div className="space-y-2 pt-1">
+            <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+              <div className="h-full bg-gradient-to-r from-emerald-400 via-teal-500 to-indigo-500 rounded-full animate-[sc-beam-travel_2s_linear_infinite]" />
+            </div>
+            <div className="flex justify-between text-[11px] text-gray-400 font-mono">
+              <span>Extracting records</span>
+              <span>Formatting structured report</span>
+            </div>
+          </div>
         </div>
       )}
 

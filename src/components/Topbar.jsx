@@ -35,14 +35,17 @@ export default function Topbar({ onMenu }) {
 
       <form onSubmit={submit} className="flex-1 max-w-md">
         <div className="relative">
-          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
           <input
             data-testid="global-search-input"
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Search messages, people, or keywords..."
-            className="w-full bg-white/5 border border-white/10 rounded-xl pl-9 pr-4 py-2.5 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/60 focus:border-transparent transition-all"
+            className="w-full bg-white/5 border border-white/10 rounded-xl pl-9 pr-12 py-2.5 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/60 focus:border-indigo-500/40 transition-all"
           />
+          <kbd className="hidden sm:inline-flex absolute right-3 top-1/2 -translate-y-1/2 items-center gap-0.5 px-1.5 py-0.5 rounded bg-white/10 border border-white/10 text-[10px] text-gray-400 font-mono">
+            ⌘K
+          </kbd>
         </div>
       </form>
 
@@ -52,7 +55,7 @@ export default function Topbar({ onMenu }) {
             <button data-testid="notifications-trigger" className="relative w-10 h-10 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/5 transition-all">
               <Bell size={19} />
               {unread > 0 && (
-                <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-red-500 ring-2 ring-[#07090E]" />
+                <span className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-indigo-500 ring-2 ring-[#07090E] sc-unread-pulse" />
               )}
             </button>
           </DropdownMenuTrigger>
