@@ -5,7 +5,6 @@ import { api } from "@/lib/api";
 import { useAuth } from "@/context/AuthContext";
 import { PlatformBadge } from "@/components/PlatformBadge";
 import { platform } from "@/data/platformMeta";
-import MessengerDove from "@/components/MessengerDove";
 
 const steps = [
   { icon: PlugZap, title: "Connect Apps", desc: "Connect your communication platforms.", to: "/connect", color: "#6366F1" },
@@ -29,15 +28,14 @@ export default function Home() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-      {/* Hero Section with Integrated Messenger Dove */}
+      {/* Hero Section */}
       <section className="sc-mesh relative overflow-hidden rounded-3xl border border-white/10 p-8 sm:p-12 sc-fade-up">
         {/* Background ambient gradient glow */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-violet-600/10 rounded-full blur-2xl pointer-events-none" />
 
-        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3.5 py-1.5 text-xs text-indigo-300 mb-6 shadow-[0_0_12px_rgba(99,102,241,0.2)]">
+        <div className="relative z-10 max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3.5 py-1.5 text-xs text-indigo-300 mb-6 shadow-[0_0_12px_rgba(99,102,241,0.2)]">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <span>Real-Time Sync Active · Multi-Channel Hub</span>
             </div>
@@ -70,12 +68,6 @@ export default function Home() {
               </button>
             </div>
           </div>
-
-          {/* Majestic Messenger Dove Soaring Animation - Borderless */}
-          <div className="hidden sm:flex flex-col items-center justify-center relative lg:pr-2">
-            <MessengerDove size="xl" />
-          </div>
-        </div>
 
         {/* Quick Hub Stats strip */}
         <div className="mt-10 pt-6 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4">
